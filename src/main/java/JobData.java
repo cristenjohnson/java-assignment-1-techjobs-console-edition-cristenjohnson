@@ -101,10 +101,11 @@ public class JobData {
 
         for (HashMap<String, String> row : allJobs) {
             for(String key : row.keySet()) {
-                String aValue = row.get(key);
+                String aValue = row.get(key.toLowerCase());
 
             if (aValue.contains(searchTerm)) {
                 jobs.add(row);
+                break;
             }
             //input syntax for removing duplicates
             }
