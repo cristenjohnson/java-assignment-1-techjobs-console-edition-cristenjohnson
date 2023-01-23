@@ -7,7 +7,7 @@ public class TechJobs {
 
     static Scanner in = new Scanner(System.in);
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
         // Initialize our field map with key/name pairs
         HashMap<String, String> columnChoices = new HashMap<>();
@@ -84,7 +84,7 @@ public class TechJobs {
 
         do {
 
-            System.out.println("\n" + menuHeader);
+            System.out.println("\n" + menuHeader); //am i supposed to update this?
 
             // Print available choices
             for (int j = 0; j < choiceKeys.length; j++) {
@@ -109,7 +109,7 @@ public class TechJobs {
                 validChoice = true;
             }
 
-        } while(!validChoice);
+        } while (!validChoice);
 
         return choiceKeys[choiceIdx];
     }
@@ -118,23 +118,23 @@ public class TechJobs {
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
 //
-            for(HashMap<String,String> jobs : someJobs){
-                System.out.println();
-                System.out.println("*****");
-                for (String key : jobs.keySet()) {
-                    System.out.println(key + ": "+ jobs.get(key));
-                }
-                System.out.println("*****");
-                System.out.println();
-
+        for (HashMap<String, String> jobs : someJobs) {
+            System.out.println();
+            System.out.println("*****");
+            for (String key : jobs.keySet()) {
+                System.out.println(key + ": " + jobs.get(key));
             }
+            System.out.println("*****");
+            System.out.println();
+
         }
+//i'm thinking of running a while loop for all columns is this correct
+        if(someJobs.isEmpty() ){
+            System.out.println("No Results");
+        }
+ }
+
+}
 
 
 
-
-    }
-
-//    private static int keySet() {
-//    }
-//}
